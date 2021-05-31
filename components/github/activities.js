@@ -5,55 +5,27 @@ import axios from 'axios';
 const Activities = () => {
 
   const [activityList, setActivityList] = useState([]);
-  const [commitHistory, setCommitHistory] = useState({});
-  let commitsPerRepo = {};
+
   useEffect( async () => {
-    const response = await axios.get("https://api.github.com/users/JavLG/repos",{headers: {
+    const response = await fetch("https://api.github.com/users/JavLG/repos",{headers: {
       Authorization: `Authorization: token ${process.env.GITHUB_TOKEN}`,
       "Content-Type": "application/json"
   }}).then(res => {
-    return Object.keys(res['data']).map(key => res['data'][key].name)
+    return res.json()
   }).catch(e => console.log(e));
-    setActivityList(response);
+    setActivityList(response.map(({name}) => name));
   },[])
 
-  useEffect( async () => {
-    
-    activityList.forEach(async (activity) => {
-      
-      await axios.get(`https://api.github.com/repos/javLG/${activity}/commits`,{headers: {
-        Authorization: `Authorization: token ${process.env.GITHUB_TOKEN}`,
-        "Content-Type": "application/json"
-    }}).then(res =>{ 
-
-    commitsPerRepo[activity] = res["data"].map(elem => 
-      {
-
-      return {
-        "sha":elem["sha"].substring(0, 7),
-        "author":elem["commit"]["author"].name,
-        "date":elem["commit"]["author"].date,
-        "message":elem["commit"]["message"],
-        "url":elem["commit"]["url"],
-        "profilePic":elem["author"].avatar_url,
-      }
   
-    })
-    }).catch(e => assert(e))
-  })
-  await setCommitHistory(commitsPerRepo)
-  console.log(commitHistory)
-}
-   ,[activityList])
+
   
   
 
   return (
     <div className="w-full mx-5">
-      {commitHistory && activityList.map((activity, i) => 
+      {activityList && activityList.map((activity, i) => 
       <ActivityItem 
-      activity={activity} 
-      commitHistory={commitHistory} 
+      activity={activity}
       key={i}/>
       )}
     </div>

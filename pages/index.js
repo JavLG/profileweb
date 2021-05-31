@@ -81,7 +81,7 @@ export default function Home() {
             <div className="max-w-5xl px-6 mx-auto text-center">
                 <h2 className="text-2xl font-semibold text-gray-800">Mi última actividad</h2>
 
-                <div className="flex flex-col items-center justify-center mt-6">
+                <div className="flex flex-col items-center justify-center mt-1">
                     
                           {/*ACA IRA EL COMPONENTE GIT MAPEABLE*/}
                           <Activities />
