@@ -49,7 +49,7 @@ const ActivityItem = ({ activity, i }) => {
       <a
         onClick={showCommits}
         key={i}
-        className={`text-2xl flex justify-start items-center mx-4 
+        className={`text-sm md:text-2xl flex justify-start items-center mx-4 
         p-3 my-3 w-full h-14 bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform ${
           toggleCommits ? "-translate-y-1 scale-110" : ""
         }`}
