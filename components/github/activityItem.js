@@ -28,7 +28,7 @@ const ActivityItem = ({ activity, i }) => {
 
   useEffect(async () => {
     const response = await fetch(
-      `https://api.github.com/repos/javLG/${activity}/commits`,
+      `https://api.github.com/repos/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/${activity}/commits`,
       {
         headers: {
           Authorization: `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
