@@ -1,16 +1,12 @@
 //IMPORT MODULE
 
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from "next/head";
+import Image from "next/image";
 
-import styles from '../styles/Home.module.css';
+import styles from "../styles/Home.module.css";
 
 //IMPORT SRC
-import Activities from '../components/github/activities'
-
-
-
-
+import Activities from "../components/github/activities";
 
 export default function Home() {
   return (
@@ -21,191 +17,343 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="font-sans bg-yellow-100">
-    <div>
-        <header className="bg-yellow-50 shadow border-t-4 border-indigo-600">
+      <div className="font-sans bg-yellow-100">
+        <div>
+          <header className="bg-yellow-50 shadow border-t-4 border-indigo-600">
             <div className="container mx-auto px-6 py-4">
-                <div className="flex items-center justify-between">
-                    <div>
-                        <a className="flex items-center text-gray-800 hover:text-indigo-600" href="#">
-                            <svg className="h-6 w-6 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                            </svg>
+              <div className="flex items-center justify-between">
+                <div>
+                  <a
+                    className="flex items-center text-gray-800 hover:text-indigo-600"
+                    href="#"
+                  >
+                    <svg
+                      className="h-6 w-6 sm:h-6 sm:w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
 
-                            <span className="mx-3 font-medium text-sm md:text-base">Javier Lopez Galache</span>
-                        </a>
-                    </div>
-                    <div className="flex items-center -mx-2">
-                        <a className="flex items-center mx-2 text-gray-800 hover:text-indigo-600" href="#">
-                            <svg className="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                        </a>
-
-                        <a className="flex items-center mx-2 text-gray-800 hover:text-indigo-600" href="#">
-                            <svg className="h-5 w-5 sm:h-6 sm:w-6 fill-current" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-                                <path d='M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z'/>
-                            </svg>
-                        </a>
-
-                        <a className="flex items-center mx-2 text-gray-800 hover:text-indigo-600" href="#">
-                            <svg className="h-5 w-5 sm:h-6 sm:w-6 fill-current" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-                                <path d='M256,32C132.3,32,32,134.9,32,261.7c0,101.5,64.2,187.5,153.2,217.9a17.56,17.56,0,0,0,3.8.4c8.3,0,11.5-6.1,11.5-11.4,0-5.5-.2-19.9-.3-39.1a102.4,102.4,0,0,1-22.6,2.7c-43.1,0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1,1.4-14.1h.1c22.5,2,34.3,23.8,34.3,23.8,11.2,19.6,26.2,25.1,39.6,25.1a63,63,0,0,0,25.6-6c2-14.8,7.8-24.9,14.2-30.7-49.7-5.8-102-25.5-102-113.5,0-25.1,8.7-45.6,23-61.6-2.3-5.8-10-29.2,2.2-60.8a18.64,18.64,0,0,1,5-.5c8.1,0,26.4,3.1,56.6,24.1a208.21,208.21,0,0,1,112.2,0c30.2-21,48.5-24.1,56.6-24.1a18.64,18.64,0,0,1,5,.5c12.2,31.6,4.5,55,2.2,60.8,14.3,16.1,23,36.6,23,61.6,0,88.2-52.4,107.6-102.3,113.3,8,7.1,15.2,21.1,15.2,42.5,0,30.7-.3,55.5-.3,63,0,5.4,3.1,11.5,11.4,11.5a19.35,19.35,0,0,0,4-.4C415.9,449.2,480,363.1,480,261.7,480,134.9,379.7,32,256,32Z'/>
-                            </svg>
-                        </a>
-                    </div>
+                    <span className="mx-3 font-medium text-sm md:text-base">
+                      Javier Lopez Galache
+                    </span>
+                  </a>
                 </div>
-            </div>
-        </header>
+                <div className="flex items-center -mx-2">
+                  <a
+                    className="flex items-center mx-2 text-gray-800 hover:text-indigo-600"
+                    href="#"
+                  >
+                    <svg
+                      className="h-5 w-5 sm:h-6 sm:w-6"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
 
-        <section className="bg-yellow-100 mt-20">
+                  <a
+                    className="flex items-center mx-2 text-gray-800 hover:text-indigo-600"
+                    href="#"
+                  >
+                    <svg
+                      className="h-5 w-5 sm:h-6 sm:w-6 fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z" />
+                    </svg>
+                  </a>
+
+                  <a
+                    className="flex items-center mx-2 text-gray-800 hover:text-indigo-600"
+                    href="#"
+                  >
+                    <svg
+                      className="h-5 w-5 sm:h-6 sm:w-6 fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M256,32C132.3,32,32,134.9,32,261.7c0,101.5,64.2,187.5,153.2,217.9a17.56,17.56,0,0,0,3.8.4c8.3,0,11.5-6.1,11.5-11.4,0-5.5-.2-19.9-.3-39.1a102.4,102.4,0,0,1-22.6,2.7c-43.1,0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1,1.4-14.1h.1c22.5,2,34.3,23.8,34.3,23.8,11.2,19.6,26.2,25.1,39.6,25.1a63,63,0,0,0,25.6-6c2-14.8,7.8-24.9,14.2-30.7-49.7-5.8-102-25.5-102-113.5,0-25.1,8.7-45.6,23-61.6-2.3-5.8-10-29.2,2.2-60.8a18.64,18.64,0,0,1,5-.5c8.1,0,26.4,3.1,56.6,24.1a208.21,208.21,0,0,1,112.2,0c30.2-21,48.5-24.1,56.6-24.1a18.64,18.64,0,0,1,5,.5c12.2,31.6,4.5,55,2.2,60.8,14.3,16.1,23,36.6,23,61.6,0,88.2-52.4,107.6-102.3,113.3,8,7.1,15.2,21.1,15.2,42.5,0,30.7-.3,55.5-.3,63,0,5.4,3.1,11.5,11.4,11.5a19.35,19.35,0,0,0,4-.4C415.9,449.2,480,363.1,480,261.7,480,134.9,379.7,32,256,32Z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <section className="bg-yellow-100 mt-20">
             <div className="max-w-2xl px-6 text-center mx-auto">
-                <h2 className="text-3xl font-semibold text-gray-800">Hola, soy <span className="bg-indigo-600 text-white rounded px-1">Javi</span> . Un gusto conocerte.</h2>
-                <p className="text-gray-600 mt-4">Si llegaste a mi pagina web, ya es todo un avance!
-                </p>
-                <div className="flex items-end justify-center mt-16 relative h-64">
-                  <img src="./assets/avatar2.png" className={styles.avatar}/>
-                 </div>
+              <h2 className="text-3xl font-semibold text-gray-800">
+                Hola, soy{" "}
+                <span className="bg-indigo-600 text-white rounded px-1">
+                  Javi
+                </span>{" "}
+                . Un gusto conocerte.
+              </h2>
+              <p className="text-gray-600 mt-4">
+                Si llegaste a mi pagina web, ya es todo un avance!
+              </p>
+              <div className="flex items-end justify-center mt-16 relative h-64">
+                <img src="./assets/avatar2.png" className={styles.avatar} />
+              </div>
             </div>
-        </section>
+          </section>
 
-        <section className="bg-gray-800 pattern py-20">
+          <section className="bg-gray-800 pattern py-20">
             <div className="max-w-5xl px-6 mx-auto text-center">
-                <h2 className="text-2xl font-semibold text-white">Sobre mi</h2>
+              <h2 className="text-2xl font-semibold text-white">Sobre mi</h2>
 
-                <p className="text-gray-400 mt-4">Mi nombre es Javier Lopez Galache, tengo 27 años y soy Fullstack Developer. Cuento con 4 años de experiencia desarrollando con tecnologías de Python y Javascript. Actualmente me encuentro incursionando en el desarrollo movil, mi proximo objetivo. Espero que disfrutes la estadia en mi sitio, cierra la puerta al salir.</p>
+              <p className="text-gray-400 text-lg mt-4">
+                Mi nombre es Javier Lopez Galache, tengo 27 años y soy Fullstack
+                Developer. Cuento con 4 años de experiencia desarrollando con
+                tecnologías de Python y Javascript. Actualmente me encuentro
+                incursionando en el desarrollo movil, mi proximo objetivo.
+                Espero que disfrutes la estadia en mi sitio, cierra la puerta al
+                salir.
+              </p>
             </div>
-        </section>
+          </section>
 
-        <section className="bg-white py-20">
-            <div className="max-w-5xl px-6 mx-auto text-center">
-                <h2 className="text-2xl font-semibold text-gray-800">Mi última actividad</h2>
+          <section className="bg-white py-20">
+            <div className="mx-auto text-center">
+              <h2 className="text-2xl font-semibold text-gray-800">
+                Mi última actividad
+              </h2>
 
-                <div className="flex flex-col items-center justify-center mt-1">
-                    
-                          {/*ACA IRA EL COMPONENTE GIT MAPEABLE*/}
-                          <Activities />
+              <div className="flex items-center justify-center mx-10 mt-1">
+                <Activities />
+              </div>
 
+              <div className="flex items-center justify-center mt-12">
+                <a
+                  className="flex items-center text-gray-600 hover:underline hover:text-gray-500"
+                  href="#"
+                >
+                  <span>Ver más!</span>
 
-                </div>
-
-                <div className="flex items-center justify-center mt-12">
-                    <a className="flex items-center text-gray-600 hover:underline hover:text-gray-500" href="#">
-                        <span>Ver más!</span>
-
-                        <svg className="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </a>
-                </div>
+                  <svg
+                    className="h-5 w-5 ml-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
-        </section>
+          </section>
 
-        <section className="bg-gray-800 pattern py-20">
+          <section className="bg-gray-800 pattern py-20">
             <div className="max-w-5xl px-6 mx-auto text-center">
-                <h2 className="text-2xl font-semibold text-white">Projects</h2>
+              <h2 className="text-2xl font-semibold text-white">Projects</h2>
 
-                <div className="flex items-center justify-center mt-10">
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                        <div className="max-w-xs w-full">
-                            <div className="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
-                                <img className="object-cover h-8" src="https://premium-tailwindcomponents.netlify.app/assets/svg/tailwindcomponent-dark.svg" alt="" />
-                            </div>
-
-                            <a href="#" className="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                                <div className="py-2 px-3 text-center text-sm">
-                                    <p className="text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                                    <span className="block text-gray-500 mt-2">tailwindcomponents.com</span>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div className="max-w-xs w-full">
-                            <div className="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
-                                <img className="object-cover h-8" src="https://premium-tailwindcomponents.netlify.app/assets/svg/tailwindcomponent-dark.svg" alt=""  />
-                            </div>
-
-                            <a href="#" className="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                                <div className="py-2 px-3 text-center text-sm">
-                                    <p className="text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                                    <span className="block text-gray-500 mt-2">tailwindcomponents.com</span>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div className="max-w-xs w-full">
-                            <div className="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
-                                <img className="object-cover h-8" src="https://premium-tailwindcomponents.netlify.app/assets/svg/tailwindcomponent-dark.svg" alt="" />
-                            </div>
-
-                            <a href="#" className="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                                <div className="py-2 px-3 text-center text-sm">
-                                    <p className="text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                                    <span className="block text-gray-500 mt-2">tailwindcomponents.com</span>
-                                </div>
-                            </a>
-                        </div>
+              <div className="flex items-center justify-center mt-10">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  <div className="max-w-xs w-full">
+                    <div className="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
+                      <img
+                        className="object-cover h-8"
+                        src="https://premium-tailwindcomponents.netlify.app/assets/svg/tailwindcomponent-dark.svg"
+                        alt=""
+                      />
                     </div>
-                </div>
 
-                <div className="flex items-center justify-center mt-12">
-                    <a className="flex items-center text-white hover:underline hover:text-gray-200" href="#">
-                        <span>View More On Github</span>
+                    <a
+                      href="#"
+                      className="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                    >
+                      <div className="py-2 px-3 text-center text-sm">
+                        <p className="text-gray-300">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit.
+                        </p>
 
-                        <svg className="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
+                        <span className="block text-gray-500 mt-2">
+                          tailwindcomponents.com
+                        </span>
+                      </div>
                     </a>
-                </div>
-            </div>
-        </section>
+                  </div>
 
-        <footer className="bg-white">
+                  <div className="max-w-xs w-full">
+                    <div className="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
+                      <img
+                        className="object-cover h-8"
+                        src="https://premium-tailwindcomponents.netlify.app/assets/svg/tailwindcomponent-dark.svg"
+                        alt=""
+                      />
+                    </div>
+
+                    <a
+                      href="#"
+                      className="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                    >
+                      <div className="py-2 px-3 text-center text-sm">
+                        <p className="text-gray-300">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit.
+                        </p>
+
+                        <span className="block text-gray-500 mt-2">
+                          tailwindcomponents.com
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div className="max-w-xs w-full">
+                    <div className="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
+                      <img
+                        className="object-cover h-8"
+                        src="https://premium-tailwindcomponents.netlify.app/assets/svg/tailwindcomponent-dark.svg"
+                        alt=""
+                      />
+                    </div>
+
+                    <a
+                      href="#"
+                      className="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                    >
+                      <div className="py-2 px-3 text-center text-sm">
+                        <p className="text-gray-300">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit.
+                        </p>
+
+                        <span className="block text-gray-500 mt-2">
+                          tailwindcomponents.com
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-center mt-12">
+                <a
+                  className="flex items-center text-white hover:underline hover:text-gray-200"
+                  href="#"
+                >
+                  <span>View More On Github</span>
+
+                  <svg
+                    className="h-5 w-5 ml-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <footer className="bg-white">
             <div className="container mx-auto px-6 py-4">
-                <div className="flex justify-between items-center">
-                    <div>
-                        <div className="text-gray-600">&copy; Javier Lopez Galache</div>
-                    </div>
-
-                    <div className="flex items-center -mx-2">
-                        <a className="flex items-center mx-2 text-gray-600 hover:text-indigo-600" href="#">
-                            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                        </a>
-
-                        <a className="flex items-center mx-2 text-gray-600 hover:text-indigo-600" href="#">
-                            <svg className="h-5 w-5 fill-current" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-                                <path d='M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z'/>
-                            </svg>
-                        </a>
-
-                        <a className="flex items-center mx-2 text-gray-600 hover:text-indigo-600" href="#">
-                            <svg className="h-5 w-5 fill-current" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-                                <path d='M256,32C132.3,32,32,134.9,32,261.7c0,101.5,64.2,187.5,153.2,217.9a17.56,17.56,0,0,0,3.8.4c8.3,0,11.5-6.1,11.5-11.4,0-5.5-.2-19.9-.3-39.1a102.4,102.4,0,0,1-22.6,2.7c-43.1,0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1,1.4-14.1h.1c22.5,2,34.3,23.8,34.3,23.8,11.2,19.6,26.2,25.1,39.6,25.1a63,63,0,0,0,25.6-6c2-14.8,7.8-24.9,14.2-30.7-49.7-5.8-102-25.5-102-113.5,0-25.1,8.7-45.6,23-61.6-2.3-5.8-10-29.2,2.2-60.8a18.64,18.64,0,0,1,5-.5c8.1,0,26.4,3.1,56.6,24.1a208.21,208.21,0,0,1,112.2,0c30.2-21,48.5-24.1,56.6-24.1a18.64,18.64,0,0,1,5,.5c12.2,31.6,4.5,55,2.2,60.8,14.3,16.1,23,36.6,23,61.6,0,88.2-52.4,107.6-102.3,113.3,8,7.1,15.2,21.1,15.2,42.5,0,30.7-.3,55.5-.3,63,0,5.4,3.1,11.5,11.4,11.5a19.35,19.35,0,0,0,4-.4C415.9,449.2,480,363.1,480,261.7,480,134.9,379.7,32,256,32Z'/>
-                            </svg>
-                        </a>
-                    </div>
+              <div className="flex justify-between items-center">
+                <div>
+                  <div className="text-gray-600">
+                    &copy; Javier Lopez Galache
+                  </div>
                 </div>
+
+                <div className="flex items-center -mx-2">
+                  <a
+                    className="flex items-center mx-2 text-gray-600 hover:text-indigo-600"
+                    href="#"
+                  >
+                    <svg
+                      className="h-5 w-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    className="flex items-center mx-2 text-gray-600 hover:text-indigo-600"
+                    href="#"
+                  >
+                    <svg
+                      className="h-5 w-5 fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z" />
+                    </svg>
+                  </a>
+
+                  <a
+                    className="flex items-center mx-2 text-gray-600 hover:text-indigo-600"
+                    href="#"
+                  >
+                    <svg
+                      className="h-5 w-5 fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M256,32C132.3,32,32,134.9,32,261.7c0,101.5,64.2,187.5,153.2,217.9a17.56,17.56,0,0,0,3.8.4c8.3,0,11.5-6.1,11.5-11.4,0-5.5-.2-19.9-.3-39.1a102.4,102.4,0,0,1-22.6,2.7c-43.1,0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1,1.4-14.1h.1c22.5,2,34.3,23.8,34.3,23.8,11.2,19.6,26.2,25.1,39.6,25.1a63,63,0,0,0,25.6-6c2-14.8,7.8-24.9,14.2-30.7-49.7-5.8-102-25.5-102-113.5,0-25.1,8.7-45.6,23-61.6-2.3-5.8-10-29.2,2.2-60.8a18.64,18.64,0,0,1,5-.5c8.1,0,26.4,3.1,56.6,24.1a208.21,208.21,0,0,1,112.2,0c30.2-21,48.5-24.1,56.6-24.1a18.64,18.64,0,0,1,5,.5c12.2,31.6,4.5,55,2.2,60.8,14.3,16.1,23,36.6,23,61.6,0,88.2-52.4,107.6-102.3,113.3,8,7.1,15.2,21.1,15.2,42.5,0,30.7-.3,55.5-.3,63,0,5.4,3.1,11.5,11.4,11.5a19.35,19.35,0,0,0,4-.4C415.9,449.2,480,363.1,480,261.7,480,134.9,379.7,32,256,32Z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
+          </footer>
+        </div>
+        <footer>
+          <a
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Powered by{" "}
+            <span>
+              <Image
+                src="/vercel.svg"
+                alt="Vercel Logo"
+                width={72}
+                height={16}
+              />
+            </span>
+          </a>
         </footer>
+      </div>
     </div>
-    <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-</main>
-</div>
-  )
+  );
 }
