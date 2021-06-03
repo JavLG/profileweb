@@ -26,7 +26,7 @@ const Activities = () => {
 
   return (
 
-    <div className="w-full mx-5">
+    <div className="w-full flex flex-col items-center">
       {activityList && activityList.map((activity, i) => 
       <ActivityItem 
       activity={activity}

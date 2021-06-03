@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import 'tailwindcss/tailwind.css';
-
+import React from 'react';
 
 
 function MyApp({ Component, pageProps }) {
@@ -8,3 +8,4 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+

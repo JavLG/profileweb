@@ -136,7 +136,7 @@ export default function Home() {
                 Mi última actividad
               </h2>
 
-              <div className="flex items-center justify-center mx-10 mt-1">
+              <div className="flex items-center justify-center w-full mt-1">
                 <Activities />
               </div>
 

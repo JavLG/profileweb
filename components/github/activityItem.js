@@ -45,12 +45,12 @@ const ActivityItem = ({ activity, i }) => {
   }, [activity]);
 
   return (
-    <div className='w-5/6 mx-auto'>
+    <div className='w-5/6'>
       <a
         onClick={showCommits}
         key={i}
-        className={`text-sm md:text-2xl flex justify-start items-center mx-4 
-        p-3 my-3 w-full h-14 bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform ${
+        className={`text-sm md:text-2xl flex justify-start items-center 
+        p-3 w-full h-14 bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform ${
           toggleCommits ? "-translate-y-1 scale-110" : ""
         }`}
         href="#"
@@ -76,8 +76,8 @@ const ActivityItem = ({ activity, i }) => {
                         className="w-7 h-7 rounded-xl border-2 border-indigo-600"
                       />
 
-                      <p className="text-sm shadow-sm tracking-wider w-32 hidden md:block">{commit.author}</p>
-                      <p className="shadow-sm text-xl rounded-lg px-1  w-32 md:w-full overflow-hidden">{commit.message}</p>
+                      <p className="text-sm w-32 hidden md:block">{commit.author}</p>
+                      <p className="text-xl px-1  w-32 md:w-full overflow-hidden">{commit.message}</p>
 
                       
                       <p className="text-sm shadow-sm text-md text-blue-600 rounded-lg px-1  w-24 overflow-hidden hidden lg:block">{commit.sha}</p>
