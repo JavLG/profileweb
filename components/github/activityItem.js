@@ -1,4 +1,6 @@
 import styles from "./activityItem.module.css";
+import LastActivity from "../utils/Time/LastActivity";
+
 import { useState, useEffect } from "react";
 import moment from "moment";
 
@@ -28,7 +30,7 @@ const ActivityItem = ({ activity, i }) => {
 
   useEffect(async () => {
     const response = await fetch(
-      `https://api.github.com/repos/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/${activity}/commits`,
+      `https://api.github.com/repos/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/${activity.name}/commits`,
       {
         headers: {
           Authorization: `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
@@ -45,57 +47,77 @@ const ActivityItem = ({ activity, i }) => {
   }, [activity]);
 
   return (
-    <div className='w-5/6'>
+    <div className="w-5/6">
       <a
         onClick={showCommits}
         key={i}
-        className={`text-sm md:text-2xl flex justify-start items-center 
+        className={` my-2 text-sm md:text-2xl flex justify-start items-center 
         p-3 w-full h-14 bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform ${
           toggleCommits ? "-translate-y-1 scale-110" : ""
         }`}
         href="#"
       >
-        <img src="./assets/images/githubIcon.png" className="w-10 h-10 mx-2" />
-        <p className="block m-0 p-0">{activity}</p>
+        <div className="w-full flex justify-between">
+          <div className="flex">
+            <img
+              src="./assets/images/githubIcon.png"
+              className="w-10 h-10 mx-2"
+            />
+            <p className="block m-0 p-0">{activity.name}</p>
+          </div>
+          <p className="ml-2 mt-3 text-xs text-gray-500">
+            {LastActivity(activity.updated_at) === "Today"
+              ? "Last updated: Today"
+              : `Last updated: ${LastActivity(activity.updated_at)} days ago`}
+          </p>
+        </div>
       </a>
 
       {toggleCommits === true && commits
         ? commits.map((commit, j) => (
-          <div className='mx-auto w-full'>
-            <div
-              key={j}
-              className="flex mx-0 md:mx-auto my-3 w-full bg-white shadow-md rounded-md border-t-4 border-green-400 whitespace-nowrap"
-              href="#"
-            >
-              <div className="w-full flex items-center content-between px-6 py-2 mr-3">
-                <div className="w-full flex content-between items-center gap-x-3">
-                  <div className="w-full flex content-center items-center">
-                    <div className="w-full flex flex-row gap-x-4 content-between items-center mx-auto">
-                      <img
-                        src={commit.profilePic}
-                        className="w-7 h-7 rounded-xl border-2 border-indigo-600"
-                      />
+          <div className="hover:animate-pulse duration-1000 ease-in-out" key={`repo-${j}`}>
+            <div className="w-full">
+              <div
+                className="flex my-3 p-2 w-full shadow-md rounded-md border-t-4 border-green-400 whitespace-nowrap
+              text-sm items-center 
+              "
+                href="#"
+              >
+                <div className="flex w-full items-center">
+                  <img
+                    src={commit.profilePic}
+                    className="w-7 h-7 rounded-full mr-2"
+                  />
 
-                      <p className="text-sm w-32 hidden md:block">{commit.author}</p>
-                      <p className="text-xl px-1  w-32 md:w-full overflow-hidden">{commit.message}</p>
+                  <p className="mx-3 font-semibold 
+                  text-md sm:text-lg w-32 hidden md:block">
+                    {commit.author}
+                  </p>
 
-                      
-                      <p className="text-sm shadow-sm text-md text-blue-600 rounded-lg px-1  w-24 overflow-hidden hidden lg:block">{commit.sha}</p>
-                    </div>
-                    
+                  <p className="mx-auto w-full max-w-3/7 text-sm md:text-md lg:text-lg px-1 overflow-hidden whitespace-normal truncate">
+                    {commit.message}
+                  </p>
+
+                  <div className="ml-3 w-2/7 flex justify-end">
+                  <div className="flex items-center flex-nowrap">
+                  <p className="text-sm text-md text-blue-600 px-1 mx-2  w-24 overflow-hidden hidden lg:block">
+                    {commit.sha}
+                  </p>
+                  <div className="px-2 py-1.1 text-sm shadow-sm font-medium tracking-wider border text-green-600 rounded-full">
+                    <p>{moment(commit.date).format("MMM Do YYYY")}</p>
+                    <p className="">
+                      {moment(commit.date).format(" HH:MM")}
+                    </p>
                   </div>
-                  
                 </div>
-                <div className="whitespace-nowrap">
-                      <p className="px-1 py-1 text-sm shadow-sm font-medium tracking-wider border text-green-600 rounded-full inline-flex">
-                        <p>{moment(commit.date).format("MMM Do YYYY")}</p>
-                        <p className='hidden sm:block'>{moment(commit.date).format("-HH:MM")}</p>
-                      </p>
-                    </div>
+                </div>
+                </div>
+                
               </div>
             </div>
+          
             </div>
-          ))
+            ))
         : null}
     </div>
   );
