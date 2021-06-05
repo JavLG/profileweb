@@ -4,34 +4,40 @@ import Image from 'Next/image';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { myLanguages } from '../Paths';
+import React from "react";
 
 
 export const Carousel = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
+    fade: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplaySpeed: 2000,
+    autoplay:true,
+    arrows: false,
+    className:""
   };
 
   return(
-      <div className="mt-3 mx-auto w-96 h-96 bg-yellow-500 rounded-lg">
-        <div className="w-full h-full flex justify-center items-center">
+
+
+        <React.Fragment>
+          <div className="mx-auto w-56 mt-10">
           {/*JSON.stringify(myLanguages)*/}
-          <Slider {...settings}> 
-            {myLanguages && myLanguages.map((path, idx) => {
+          <Slider {...settings} className="mx-auto w-full">
+            {myLanguages ? myLanguages.map(elem => <div className="z-10 block text-white"><Image src={elem} height={360} width={360} /></div>): null}
             
-            console.log("PATH Nº",idx,": ",path)
-            return <div id="test" className="h-full w-full"><img src={path}/></div>
-
-            }) }
+            {/*
+            <div className="z-10 block text-white"><Image/></div>
+            <div className="z-10 block text-white"><Image/></div>
+            <div className="z-10 block text-white"><Image/></div>
+            */}
           </Slider>
+          </div>
+        </React.Fragment>
 
-          <div className="w-52 h-52 bg-green-400"></div>
-        </div>
-
-        {/* <Image src={}/>  */}
-      </div>
     );
 }

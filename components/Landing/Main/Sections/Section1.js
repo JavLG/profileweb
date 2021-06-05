@@ -4,8 +4,8 @@ import styles from "./styles.module.css";
 const Section1 = () => {
   return (
     <>
-                <section className="bg-yellow-100 mt-20">
-            <div className="max-w-2xl px-6 text-center mx-auto">
+                <section className="bg-yellow-100">
+            <div className="max-w-2xl pt-24 px-6 text-center mx-auto">
               <h2 className="text-4xl font-semibold text-gray-800">
                 Hola, soy{" "}
                 <span className="bg-indigo-600 text-white rounded px-1">

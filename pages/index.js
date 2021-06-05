@@ -49,7 +49,7 @@ export default function Home() {
       </Head>
 
       <div id="main_section" className="font-sans bg-yellow-100">
-        <div>
+        <div className="mt-0">
           <Header />
             <Section1 />
             <Section2 />

@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import moment from "moment";
 
 const ActivityItem = ({ activity, i }) => {
+  const commitQty = 5;
   const [toggleCommits, setToggleCommits] = useState(false);
   const [commits, setCommits] = useState([]);
 
@@ -74,12 +75,12 @@ const ActivityItem = ({ activity, i }) => {
       </a>
 
       {toggleCommits === true && commits
-        ? commits.map((commit, j) => (
+        ? commits.slice(0, commitQty).map((commit, j) => (
           <div className="hover:animate-pulse duration-1000 ease-in-out" key={`repo-${j}`}>
             <div className="w-full">
               <div
                 className="flex my-3 p-2 w-full shadow-md rounded-md border-t-4 border-green-400 whitespace-nowrap
-              text-sm items-center 
+              text-sm items-center
               "
                 href="#"
               >

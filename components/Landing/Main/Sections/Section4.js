@@ -3,14 +3,14 @@ import React from 'react';
 const Section4 = () => {
   return (
     <div>
-      <section className="bg-gray-800 pattern py-20">
+      <section className="bg-white pattern py-20">
             <div className="max-w-5xl px-6 mx-auto text-center">
-              <h2 className="text-2xl font-semibold text-white">Projects</h2>
+              <h2 className="text-2xl font-semibold text-black">Projects</h2>
 
               <div className="flex items-center justify-center mt-10">
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   <div className="max-w-xs w-full">
-                    <div className="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
+                    <div className="flex items-center justify-center h-56 bg-gray-300 border-b-8 border-l-2 border-t-2 border-r-2 border-teal-400 rounded-md overflow-hidden">
                       <img
                         className="object-cover h-8"
                         src="https://premium-tailwindcomponents.netlify.app/assets/svg/tailwindcomponent-dark.svg"
@@ -36,7 +36,7 @@ const Section4 = () => {
                   </div>
 
                   <div className="max-w-xs w-full">
-                    <div className="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
+                    <div className="flex items-center justify-center h-56 bg-gray-300 border-l-2 border-t-2 border-r-2 border-b-8 border-teal-400 rounded-md overflow-hidden">
                       <img
                         className="object-cover h-8"
                         src="https://premium-tailwindcomponents.netlify.app/assets/svg/tailwindcomponent-dark.svg"
@@ -62,7 +62,7 @@ const Section4 = () => {
                   </div>
 
                   <div className="max-w-xs w-full">
-                    <div className="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
+                    <div className="flex items-center justify-center h-56 bg-gray-300 border-l-2 border-t-2 border-r-2 border-b-8 border-teal-400 rounded-md overflow-hidden">
                       <img
                         className="object-cover h-8"
                         src="https://premium-tailwindcomponents.netlify.app/assets/svg/tailwindcomponent-dark.svg"
