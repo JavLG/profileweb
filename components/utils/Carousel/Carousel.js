@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import Image from 'Next/image';
+
 //IMPORT MODULE
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -28,7 +28,7 @@ export const Carousel = () => {
           <div className="mx-auto w-56 mt-10">
           {/*JSON.stringify(myLanguages)*/}
           <Slider {...settings} className="mx-auto w-full">
-            {myLanguages ? myLanguages.map(elem => <div className="z-10 block text-white"><Image src={elem} height={360} width={360} /></div>): null}
+            {myLanguages ? myLanguages.map(elem => <div className="z-10 block text-white"><img src={elem} style={{width:300, height:260}} /></div>): null}
             
             {/*
             <div className="z-10 block text-white"><Image/></div>
