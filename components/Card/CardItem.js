@@ -1,6 +1,3 @@
-import Image from 'next/image';
-
-
 const CardItem = ({projectDetail : {description, imgUrl, name, seoTags, technologies}}) => {
 
   console.log(description, imgUrl, name, seoTags, technologies)
