@@ -2,7 +2,6 @@
 
 import Head from "next/head";
 
-
 //IMPORT SRC
 import Header from '../components/Landing/Header/Header';
 import Footer from '../components/Landing/Footer/Footer';
