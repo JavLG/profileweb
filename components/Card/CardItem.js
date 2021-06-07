@@ -1,4 +1,4 @@
-import Image from 'Next/image';
+import Image from 'next/image';
 
 
 const CardItem = ({projectDetail : {description, imgUrl, name, seoTags, technologies}}) => {
