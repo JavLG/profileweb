@@ -3,7 +3,7 @@ import Slider from "react-slick";
 //IMPORT MODULE
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { myLanguages } from '../components/utils/Paths';
+import { myLanguages } from '../src/components/utils/Paths';
 
 
 function carousel(props) {

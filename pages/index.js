@@ -3,11 +3,11 @@
 import Head from "next/head";
 
 //IMPORT SRC
-import Header from '../components/Landing/Header/Header';
-import Footer from '../components/Landing/Footer/Footer';
-import { Section1, Section2, Section3, Section4 } from '../components/Landing/Main/index'
+import Header from '../src/components/Landing/Header/Header';
+import Footer from '../src/components/Landing/Footer/Footer';
+import { Section1, Section2, Section3, Section4 } from '../src/components/Landing/Main/index'
 
-import { LanguagesPNG } from '../components/utils/Paths'; 
+import { LanguagesPNG } from '../src/components/utils/Paths'; 
 
 { /* <FirebaseDatabaseNode
   path="user_bookmarks/"

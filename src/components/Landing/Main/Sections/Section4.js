@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import * as firebaseTools from '../../../../services/firebaseClient';
+import * as firebaseTools from '../../../../../services/firebaseClient';
 import CardContainer from '../../../Card/CardContainer';
 
 const Section4 = () => {
