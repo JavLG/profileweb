@@ -8,13 +8,13 @@ const CardItem = ({projectDetail : {description, imgUrl, name, seoTags, technolo
                       {/*JSON.stringify(projectDetail)*/}
                     
 
-            <div className="bg-white border-t-4 border-green-400 shadow-md  rounded-3xl mx-8 p-4">
+        <div className="bg-white border-t-4 border-green-400 shadow-md  rounded-3xl mx-8 p-4 max-w-xl">
                 <div className="flex-none lg:flex">
                     <div className="h-64 w-full md:min-h-85 lg:h-48 lg:w-96  lg:mb-0 mb-3">
                         <img src={imgUrl}
                             alt={
                               technologies.reduce((tec,acc) => acc = acc + "," + tec)
-                            }  className=" w-full object-fill h-full  lg:h-48 rounded-2xl" />
+                            }  className=" w-full object-contain h-full  lg:h-48 rounded-2xl" />
                     </div>
                     <div className="flex-auto ml-3 justify-evenly py-2">
                         <div className="flex flex-wrap ">
@@ -24,7 +24,7 @@ const CardItem = ({projectDetail : {description, imgUrl, name, seoTags, technolo
                             <h2 className="flex-auto text-lg font-medium">{name}</h2>
                         </div>
                         <p className="mt-3">
-                          {description}
+                          {description ? description : null}
                         </p>
                         <div className="flex py-4  text-sm text-gray-600">
                             <div className="flex-1 inline-flex items-center">
